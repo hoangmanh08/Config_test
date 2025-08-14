@@ -1,0 +1,25 @@
+{
+    "message": "Different",
+    "values_changed": [
+        {
+            "key": "root['spec']['containers'][0]['volumeMounts'][0]['mountPath']",
+            "old_value": "/u01/k8saudit/audit.log",
+            "new_value": "/u01/k8saudit"
+        },
+        {
+            "key": "root['spec']['volumes'][0]['hostPath']['path']",
+            "old_value": "/u01/k8saudit/audit.log",
+            "new_value": "/u01/k8saudit"
+        },
+        {
+            "key": "root['spec']['volumes'][0]['hostPath']['type']",
+            "old_value": "",
+            "new_value": "DirectoryOrCreate"
+        }
+    ],
+    "dictionary_item_added": [
+        {
+            "key": "root['spec']['containers'][0]['volumeMounts'][0]['readOnly']"
+        }
+    ]
+}

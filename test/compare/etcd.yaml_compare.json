@@ -1,0 +1,40 @@
+{
+    "message": "Different",
+    "values_changed": [
+        {
+            "key": "root['metadata']['annotations']['kubeadm.kubernetes.io/etcd.advertise-client-urls']",
+            "old_value": "https://172.32.112.2:2379",
+            "new_value": "https://172.1.1.112:2379"
+        },
+        {
+            "key": "root['spec']['containers'][0]['command'][8]",
+            "old_value": "--initial-cluster=hhtvtn02contocs4ocsk8s01=https://172.32.112.2:2380,hhtvtn02contocs4ocsk8s03=https://172.32.112.4:2380,hhtvtn02contocs4ocsk8s02=https://172.32.112.3:2380",
+            "new_value": "--initial-cluster=k8s01=https://172.1.1.112:2380,k8s03=https://172.32.112.4:2380,k8s02=https://172.32.112.3:2380"
+        },
+        {
+            "key": "root['spec']['containers'][0]['command'][1]",
+            "old_value": "--advertise-client-urls=https://172.32.112.2:2379",
+            "new_value": "--advertise-client-urls=https://172.1.1.112:2379"
+        },
+        {
+            "key": "root['spec']['containers'][0]['command'][7]",
+            "old_value": "--initial-advertise-peer-urls=https://172.32.112.2:2380",
+            "new_value": "--initial-advertise-peer-urls=https://172.1.1.112:2380"
+        },
+        {
+            "key": "root['spec']['containers'][0]['command'][13]",
+            "old_value": "--listen-peer-urls=https://172.32.112.2:2380",
+            "new_value": "--listen-peer-urls=https://172.1.1.112:2380"
+        },
+        {
+            "key": "root['spec']['containers'][0]['command'][14]",
+            "old_value": "--name=hhtvtn02contocs4ocsk8s01",
+            "new_value": "--name=k8s01"
+        },
+        {
+            "key": "root['spec']['containers'][0]['command'][11]",
+            "old_value": "--listen-client-urls=https://127.0.0.1:2379,https://172.32.112.2:2379",
+            "new_value": "--listen-client-urls=https://127.0.0.1:2379,https://172.1.1.112:2379"
+        }
+    ]
+}

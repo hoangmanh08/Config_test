@@ -1,0 +1,147 @@
+apiVersion: audit.k8s.io/v1
+kind: Policy
+rules:
+- level: null
+  userGroups:
+  - system:serviceaccounts:kube-system
+- level: null
+  namespaces:
+  - kube-system
+  resources:
+  - group: ''
+    resources:
+    - configmaps
+  users:
+  - system:unsecured
+  verbs:
+  - get
+- level: null
+  resources:
+  - group: ''
+    resources:
+    - nodes
+  users:
+  - kubelet
+  verbs:
+  - get
+- level: null
+  resources:
+  - group: ''
+    resources:
+    - nodes
+  userGroups:
+  - system:nodes
+  verbs:
+  - get
+  - patch
+- level: null
+  resources:
+  - group: ''
+    resources:
+    - secrets
+  userGroups:
+  - system:nodes
+  verbs:
+  - get
+- level: null
+  namespaces:
+  - kube-system
+  resources:
+  - group: ''
+    resources:
+    - endpoints
+  users:
+  - system:kube-controller-manager
+  - system:kube-scheduler
+  - system:serviceaccount:kube-system:endpoint-controller
+  verbs:
+  - get
+  - update
+- level: null
+  resources:
+  - group: ''
+    resources:
+    - namespaces
+  users:
+  - system:apiserver
+  verbs:
+  - get
+- level: null
+  nonResourceURLs:
+  - /healthz*
+  - /version
+  - /openapi/v2*
+  - /readyz*
+  - /livez*
+- level: null
+  resources:
+  - group: ''
+    resources:
+    - events
+  - group: events.k8s.io
+    resources:
+    - events
+- level: Metadata
+  resources:
+  - group: ''
+    resources:
+    - secrets
+    - configmaps
+  - group: authentication.k8s.io
+    resources:
+    - tokenreviews
+- level: Request
+  resources:
+  - group: ''
+    resources:
+    - persistentvolumeclaims
+    - persistentvolumes
+  verbs:
+  - create
+  - delete
+  - update
+  - patch
+- level: Request
+  resources:
+  - group: ''
+    resources:
+    - pods
+    - replicacontrollers
+    - container
+  - group: apps
+    resources:
+    - daemonsets
+    - deployments
+    - replicasets
+    - statefulsets
+  - group: batch
+    resources:
+    - jobs
+    - cronjobs
+  - group: extensions
+    resources:
+    - daemonsets
+    - deployments
+    - replicasets
+  verbs:
+  - create
+  - update
+  - patch
+- level: RequestResponse
+  resources:
+  - group: crd.projectcalico.org
+  verbs:
+  - create
+  - update
+  - delete
+  - patch
+- level: null
+  resources:
+  - group: apiregistration.k8s.io
+  - group: coordination.k8s.io
+- level: Metadata
+  verbs:
+  - create
+  - update
+  - delete
+  - patch

@@ -1,0 +1,70 @@
+Traceback (most recent call last):
+  File "/workspaces/k8sconfig/test/compare_all.py", line 1, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'
+Traceback (most recent call last):
+  File "/workspaces/k8sconfig/test/compare_all.py", line 1, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'
+bash: */10: No such file or directory
+Traceback (most recent call last):
+  File "/workspaces/k8sconfig/test/compare_all.py", line 1, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'
+Traceback (most recent call last):
+  File "/workspaces/k8sconfig/test/compare_all.py", line 1153, in <module>
+    main()
+  File "/workspaces/k8sconfig/test/compare_all.py", line 1146, in main
+    process_excel('/workspaces/k8sconfig/test/Kubernetes_Prameters_Configuration.xlsx')
+  File "/workspaces/k8sconfig/test/compare_all.py", line 1036, in process_excel
+    compare_toml(file_path, new_config_file, sheet_name, file1, folder_name_NEW, folder_compare)
+  File "/workspaces/k8sconfig/test/compare_all.py", line 384, in compare_toml
+    with open(tom_file, "w", encoding="utf-8") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/workspaces/k8sconfig/test/new_file_default/new_config.toml'
+Traceback (most recent call last):
+  File "/workspaces/k8sconfig/test/compare_all.py", line 1153, in <module>
+    main()
+  File "/workspaces/k8sconfig/test/compare_all.py", line 1146, in main
+    process_excel('/workspaces/k8sconfig/test/Kubernetes_Prameters_Configuration.xlsx')
+  File "/workspaces/k8sconfig/test/compare_all.py", line 1036, in process_excel
+    compare_toml(file_path, new_config_file, sheet_name, file1, folder_name_NEW, folder_compare)
+  File "/workspaces/k8sconfig/test/compare_all.py", line 384, in compare_toml
+    with open(tom_file, "w", encoding="utf-8") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/workspaces/k8sconfig/test/new_file_default/new_config.toml'
+Traceback (most recent call last):
+  File "/workspaces/k8sconfig/test/compare_all.py", line 1153, in <module>
+    main()
+  File "/workspaces/k8sconfig/test/compare_all.py", line 1146, in main
+    process_excel('/workspaces/k8sconfig/test/Kubernetes_Prameters_Configuration.xlsx')
+  File "/workspaces/k8sconfig/test/compare_all.py", line 1036, in process_excel
+    compare_toml(file_path, new_config_file, sheet_name, file1, folder_name_NEW, folder_compare)
+  File "/workspaces/k8sconfig/test/compare_all.py", line 384, in compare_toml
+    with open(tom_file, "w", encoding="utf-8") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/workspaces/k8sconfig/test/new_file_default/new_config.toml'
+Traceback (most recent call last):
+  File "/workspaces/k8sconfig/test/compare_all.py", line 1153, in <module>
+    main()
+  File "/workspaces/k8sconfig/test/compare_all.py", line 1146, in main
+    process_excel('/workspaces/k8sconfig/test/Kubernetes_Prameters_Configuration.xlsx')
+  File "/workspaces/k8sconfig/test/compare_all.py", line 1036, in process_excel
+    compare_toml(file_path, new_config_file, sheet_name, file1, folder_name_NEW, folder_compare)
+  File "/workspaces/k8sconfig/test/compare_all.py", line 384, in compare_toml
+    with open(tom_file, "w", encoding="utf-8") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/workspaces/k8sconfig/test/new_file_default/new_config.toml'
+Traceback (most recent call last):
+  File "/workspaces/k8sconfig/test/compare_all.py", line 1153, in <module>
+    main()
+  File "/workspaces/k8sconfig/test/compare_all.py", line 1146, in main
+    process_excel('/workspaces/k8sconfig/test/Kubernetes_Prameters_Configuration.xlsx')
+  File "/workspaces/k8sconfig/test/compare_all.py", line 1036, in process_excel
+    compare_toml(file_path, new_config_file, sheet_name, file1, folder_name_NEW, folder_compare)
+  File "/workspaces/k8sconfig/test/compare_all.py", line 384, in compare_toml
+    with open(tom_file, "w", encoding="utf-8") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/workspaces/k8sconfig/test/new_file_default/new_config.toml'
+Tổng hợp các file .json thành công! Kết quả đã được lưu vào 'all.json'.
+Tổng hợp các file .json thành công! Kết quả đã được lưu vào 'all.json'.

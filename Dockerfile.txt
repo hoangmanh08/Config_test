@@ -1,0 +1,38 @@
+FROM python:3.10-slim
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Install minimal system dependencies for ansible and python packages
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    cron \
+    gcc \
+    libffi-dev \
+    libssl-dev \
+    libpq-dev \
+    build-essential \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Install Ansible via pip (smaller footprint than apt)
+RUN pip install --no-cache-dir ansible vi top 
+
+RUN pip install --upgrade pip setuptools wheel
+
+# Install other python dependencies
+RUN pip install --no-cache-dir \
+    pandas \
+    openpyxl \
+    numpy \
+    datetime \
+    watchdog \
+    pyyaml \
+    dictdiffer \
+    tomlkit \
+    toml \
+    configparser \
+    deepdiff
+
+# Copy crontab file here if needed (optional)
+# COPY my-cron /etc/cron.d/my-cron
+# RUN chmod 0644 /etc/cron.d/my-cron && crontab /etc/cron.d/my-cron
+
+CMD ["cron", "-f"]

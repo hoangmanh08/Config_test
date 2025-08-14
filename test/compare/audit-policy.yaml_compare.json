@@ -1,0 +1,69 @@
+{
+    "message": "Different",
+    "values_changed": [
+        {
+            "key": "root['rules'][5]",
+            "old_value": {
+                "level": "None",
+                "users": [
+                    "system:kube-controller-manager",
+                    "system:kube-scheduler",
+                    "system:serviceaccount:kube-system:endpoint-controller"
+                ],
+                "verbs": [
+                    "get",
+                    "update"
+                ],
+                "namespaces": [
+                    "kube-system"
+                ],
+                "resources": [
+                    {
+                        "group": "",
+                        "resources": [
+                            "endpoints"
+                        ]
+                    }
+                ]
+            },
+            "new_value": {
+                "level": null,
+                "userGroups": [
+                    "system:serviceaccounts:kube-system"
+                ]
+            }
+        },
+        {
+            "key": "root['rules'][0]",
+            "old_value": {
+                "level": "None",
+                "userGroups": [
+                    "system:serviceaccounts:kube-system"
+                ]
+            },
+            "new_value": {
+                "level": null,
+                "users": [
+                    "system:kube-controller-manager",
+                    "system:kube-scheduler",
+                    "system:serviceaccount:kube-system:endpoint-controller"
+                ],
+                "verbs": [
+                    "get",
+                    "update"
+                ],
+                "namespaces": [
+                    "kube-system"
+                ],
+                "resources": [
+                    {
+                        "group": "",
+                        "resources": [
+                            "endpoints"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

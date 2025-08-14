@@ -1,0 +1,170 @@
+{
+    "kube-scheduler.yaml_compare.json": {
+        "message": "Same"
+    },
+    "kube-apiserver.yaml_compare.json": {
+        "message": "Different",
+        "values_changed": [
+            {
+                "key": "root['spec']['containers'][0]['volumeMounts'][0]['mountPath']",
+                "old_value": "/u01/k8saudit/audit.log",
+                "new_value": "/u01/k8saudit"
+            },
+            {
+                "key": "root['spec']['volumes'][0]['hostPath']['path']",
+                "old_value": "/u01/k8saudit/audit.log",
+                "new_value": "/u01/k8saudit"
+            },
+            {
+                "key": "root['spec']['volumes'][0]['hostPath']['type']",
+                "old_value": "",
+                "new_value": "DirectoryOrCreate"
+            }
+        ],
+        "dictionary_item_added": [
+            {
+                "key": "root['spec']['containers'][0]['volumeMounts'][0]['readOnly']"
+            }
+        ]
+    },
+    "crictl.yaml_compare.json": {
+        "message": "Different",
+        "dictionary_item_added": [
+            {
+                "key": "root['evic']"
+            }
+        ]
+    },
+    "containerd.service_compare.json": {
+        "message": "Same"
+    },
+    "sysctl.conf_compare.json": {
+        "message": "Same"
+    },
+    "config.yaml_compare.json": {
+        "message": "Same"
+    },
+    "audit-policy.yaml_compare.json": {
+        "message": "Different",
+        "values_changed": [
+            {
+                "key": "root['rules'][5]",
+                "old_value": {
+                    "level": "None",
+                    "users": [
+                        "system:kube-controller-manager",
+                        "system:kube-scheduler",
+                        "system:serviceaccount:kube-system:endpoint-controller"
+                    ],
+                    "verbs": [
+                        "get",
+                        "update"
+                    ],
+                    "namespaces": [
+                        "kube-system"
+                    ],
+                    "resources": [
+                        {
+                            "group": "",
+                            "resources": [
+                                "endpoints"
+                            ]
+                        }
+                    ]
+                },
+                "new_value": {
+                    "level": null,
+                    "userGroups": [
+                        "system:serviceaccounts:kube-system"
+                    ]
+                }
+            },
+            {
+                "key": "root['rules'][0]",
+                "old_value": {
+                    "level": "None",
+                    "userGroups": [
+                        "system:serviceaccounts:kube-system"
+                    ]
+                },
+                "new_value": {
+                    "level": null,
+                    "users": [
+                        "system:kube-controller-manager",
+                        "system:kube-scheduler",
+                        "system:serviceaccount:kube-system:endpoint-controller"
+                    ],
+                    "verbs": [
+                        "get",
+                        "update"
+                    ],
+                    "namespaces": [
+                        "kube-system"
+                    ],
+                    "resources": [
+                        {
+                            "group": "",
+                            "resources": [
+                                "endpoints"
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "10-kubeadm.conf_compare.json": {
+        "message": "Same"
+    },
+    "etcd.yaml_compare.json": {
+        "message": "Different",
+        "values_changed": [
+            {
+                "key": "root['metadata']['annotations']['kubeadm.kubernetes.io/etcd.advertise-client-urls']",
+                "old_value": "https://172.32.112.2:2379",
+                "new_value": "https://172.1.1.112:2379"
+            },
+            {
+                "key": "root['spec']['containers'][0]['command'][8]",
+                "old_value": "--initial-cluster=hhtvtn02contocs4ocsk8s01=https://172.32.112.2:2380,hhtvtn02contocs4ocsk8s03=https://172.32.112.4:2380,hhtvtn02contocs4ocsk8s02=https://172.32.112.3:2380",
+                "new_value": "--initial-cluster=k8s01=https://172.1.1.112:2380,k8s03=https://172.32.112.4:2380,k8s02=https://172.32.112.3:2380"
+            },
+            {
+                "key": "root['spec']['containers'][0]['command'][1]",
+                "old_value": "--advertise-client-urls=https://172.32.112.2:2379",
+                "new_value": "--advertise-client-urls=https://172.1.1.112:2379"
+            },
+            {
+                "key": "root['spec']['containers'][0]['command'][7]",
+                "old_value": "--initial-advertise-peer-urls=https://172.32.112.2:2380",
+                "new_value": "--initial-advertise-peer-urls=https://172.1.1.112:2380"
+            },
+            {
+                "key": "root['spec']['containers'][0]['command'][13]",
+                "old_value": "--listen-peer-urls=https://172.32.112.2:2380",
+                "new_value": "--listen-peer-urls=https://172.1.1.112:2380"
+            },
+            {
+                "key": "root['spec']['containers'][0]['command'][14]",
+                "old_value": "--name=hhtvtn02contocs4ocsk8s01",
+                "new_value": "--name=k8s01"
+            },
+            {
+                "key": "root['spec']['containers'][0]['command'][11]",
+                "old_value": "--listen-client-urls=https://127.0.0.1:2379,https://172.32.112.2:2379",
+                "new_value": "--listen-client-urls=https://127.0.0.1:2379,https://172.1.1.112:2379"
+            }
+        ]
+    },
+    "config.toml_compare.json": {
+        "message": "Different",
+        "dictionary_item_removed": [
+            {
+                "key": "root['proxy_plugins']"
+            }
+        ]
+    },
+    "kube-controller-manager.yaml_compare.json": {
+        "message": "Same"
+    }
+}

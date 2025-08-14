@@ -1,0 +1,8 @@
+{
+    "message": "Different",
+    "dictionary_item_removed": [
+        {
+            "key": "root['proxy_plugins']"
+        }
+    ]
+}
